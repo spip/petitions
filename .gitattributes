@@ -1,0 +1,23 @@
+* text=auto !eol
+actions/editer_signatures.php -text
+formulaires/configurer_petition_article.html -text
+formulaires/configurer_petition_article.php -text
+images/petition-16.png -text
+images/petition-24.png -text
+images/petition-bg-item.png -text
+images/signature-statut-poubelle-24.png -text
+images/signature-statut-prop-24.png -text
+images/signature-statut-publie-24.png -text
+lang/petition_fr.php -text
+/petition_autoriser.php -text
+/petition_pipelines.php -text
+/plugin.xml -text
+prive/configurer/petitionner.html -text
+prive/exec/controle_petition.html -text
+prive/listes/controler_petition.html -text
+prive/listes/controler_petition_fonctions.php -text
+prive/listes/inc-boutons-filtres-statut-signature.html -text
+prive/modeles/signature-actions-moderer.html -text
+prive/modeles/signature.html -text
+prive/navigation/controle_petition.html -text
+prive/style_prive_plugin_petition.html -text
