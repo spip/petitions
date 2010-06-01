@@ -1,5 +1,7 @@
 * text=auto !eol
 actions/editer_signatures.php -text
+base/petition.php -text
+base/petition_upgrade.php -text
 formulaires/configurer_petition_article.html -text
 formulaires/configurer_petition_article.php -text
 images/petition-16.png -text
