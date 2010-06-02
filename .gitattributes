@@ -1,5 +1,6 @@
 * text=auto !eol
 actions/editer_signatures.php -text
+balise/formulaire_signature.php -text
 base/petition.php -text
 base/petition_upgrade.php -text
 formulaires/configurer_petition_article.html -text
@@ -23,3 +24,4 @@ prive/modeles/signature-actions-moderer.html -text
 prive/modeles/signature.html -text
 prive/navigation/controle_petition.html -text
 prive/style_prive_plugin_petition.html -text
+public/petition.php -text
