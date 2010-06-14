@@ -1,5 +1,5 @@
 * text=auto !eol
-actions/editer_signatures.php -text
+action/editer_signatures.php -text
 balise/formulaire_signature.php -text
 base/petition.php -text
 base/petition_upgrade.php -text
