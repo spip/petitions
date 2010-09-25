@@ -13,6 +13,7 @@ images/signature-statut-prop-24.png -text
 images/signature-statut-publie-24.png -text
 lang/petitions_fr.php -text
 /petitions_autoriser.php -text
+/petitions_options.php -text
 /petitions_pipelines.php -text
 /plugin.xml -text
 prive/configurer/petitionner.html -text
