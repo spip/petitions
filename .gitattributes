@@ -7,8 +7,8 @@ action/valider_signature.php -text
 balise/formulaire_signature.php -text
 base/petitions.php -text
 base/petitions_upgrade.php -text
-formulaires/configurer_petition_article.html -text
-formulaires/configurer_petition_article.php -text
+formulaires/activer_petition_article.html -text
+formulaires/activer_petition_article.php -text
 formulaires/signature.html -text
 formulaires/signature.php -text
 images/petition-16.png -text
