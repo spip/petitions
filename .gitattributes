@@ -31,4 +31,14 @@ prive/modeles/signature-actions-moderer.html -text
 prive/modeles/signature.html -text
 prive/navigation/controle_petition.html -text
 prive/style_prive_plugin_petitions.html -text
+prive/themes/spip/images/petition-16.png -text
+prive/themes/spip/images/petition-24.png -text
+prive/themes/spip/images/petition-add-16.png -text
+prive/themes/spip/images/petition-add-24.png -text
+prive/themes/spip/images/petition-del-16.png -text
+prive/themes/spip/images/petition-del-24.png -text
+prive/themes/spip/images/petition-edit-16.png -text
+prive/themes/spip/images/petition-edit-24.png -text
+prive/themes/spip/images/petition-new-16.png -text
+prive/themes/spip/images/petition-new-24.png -text
 public/petitions.php -text
