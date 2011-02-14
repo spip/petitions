@@ -24,12 +24,12 @@ lang/petitions_fr.php -text
 /plugin.xml -text
 prive/configurer/petitionner.html -text
 prive/exec/controle_petition.html -text
-prive/listes/controler_petition.html -text
-prive/listes/controler_petition_fonctions.php -text
-prive/listes/inc-boutons-filtres-statut-signature.html -text
 prive/modeles/signature-actions-moderer.html -text
 prive/modeles/signature.html -text
 prive/navigation/controle_petition.html -text
+prive/objets/liste/controler_petition.html -text
+prive/objets/liste/controler_petition_fonctions.php -text
+prive/objets/liste/inc-boutons-filtres-statut-signature.html -text
 prive/style_prive_plugin_petitions.html -text
 prive/themes/spip/images/petition-16.png -text
 prive/themes/spip/images/petition-24.png -text
