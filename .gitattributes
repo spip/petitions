@@ -3,6 +3,7 @@ action/confirmer_signature.php -text
 action/editer_signature.php -text
 action/relancer_signature.php -text
 action/supprimer_signature.php -text
+action/traiter_lot_signature.php -text
 action/valider_signature.php -text
 balise/formulaire_signature.php -text
 base/petitions.php -text
