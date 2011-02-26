@@ -1,5 +1,6 @@
 * text=auto !eol
 action/confirmer_signature.php -text
+action/editer_petition.php -text
 action/editer_signature.php -text
 action/relancer_signature.php -text
 action/supprimer_signature.php -text
@@ -20,7 +21,6 @@ lang/petitions_fr.php -text
 prive/configurer/petitionner.html -text
 prive/modeles/signature-actions-moderer.html -text
 prive/modeles/signature.html -text
-prive/navigation/controle_petition.html -text
 prive/squelettes/contenu/controler_petition.html -text
 prive/squelettes/inclure/boutons-filtres-statut-signature.html -text
 prive/squelettes/navigation/controler_petition.html -text
