@@ -8,7 +8,6 @@ action/traiter_lot_signature.php -text
 action/valider_signature.php -text
 balise/formulaire_signature.php -text
 base/petitions.php -text
-base/petitions_upgrade.php -text
 formulaires/activer_petition_article.html -text
 formulaires/activer_petition_article.php -text
 formulaires/signature.html -text
@@ -84,10 +83,11 @@ lang/petitions_uk.php -text
 lang/petitions_vi.php -text
 lang/petitions_wo.php -text
 lang/petitions_zh.php -text
+/petitions_administrations.php -text
 /petitions_autoriser.php -text
+/petitions_fonctions.php -text
 /petitions_options.php -text
 /petitions_pipelines.php -text
-/plugin.xml -text
 prive/configurer/petitionner.html -text
 prive/modeles/signature-actions-moderer.html -text
 prive/modeles/signature.html -text
@@ -129,4 +129,3 @@ prive/themes/spip2/images/petition-new-24.png -text
 prive/themes/spip2/images/signature-statut-poubelle-24.png -text
 prive/themes/spip2/images/signature-statut-prop-24.png -text
 prive/themes/spip2/images/signature-statut-publie-24.png -text
-public/petitions.php -text
