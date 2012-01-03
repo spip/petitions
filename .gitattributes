@@ -13,6 +13,7 @@ formulaires/activer_petition_article.php -text
 formulaires/signature.html -text
 formulaires/signature.php -text
 lang/paquet-petitions.xml -text
+lang/paquet-petitions_sk.php -text
 lang/petitions.xml -text
 lang/petitions_ar.php -text
 lang/petitions_ast.php -text
