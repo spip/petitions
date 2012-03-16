@@ -15,6 +15,7 @@ formulaires/signature.php -text
 lang/paquet-petitions.xml -text
 lang/paquet-petitions_ar.php -text
 lang/paquet-petitions_en.php -text
+lang/paquet-petitions_fa.php -text
 lang/paquet-petitions_it.php -text
 lang/paquet-petitions_sk.php -text
 lang/petitions.xml -text
