@@ -1,12 +1,14 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// Fichier source, a modifier dans svn://zone.spip.org/spip-zone/_core_/plugins/petitions/lang/
+// extrait automatiquement de http://trad.spip.net/tradlang_module/petitions?lang_cible=fr_fem
+// ** ne pas modifier le fichier **
+
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
-	'alerte_confirmer_suppression_signatures' => 'Vous allez supprimer toutes les signatures de cette pétition. Êtes-vous sûr de vouloir continuer ?',
+	'alerte_confirmer_suppression_signatures' => 'Vous allez supprimer toutes les signatures de cette pétition. Êtes-vous sûre de vouloir continuer ?',
 	'aucune_signature' => 'Aucune signature',
 
 	// B
@@ -54,7 +56,7 @@ Merci de votre participation
 	'form_pet_votre_site' => 'Si vous avez un site Web, vous pouvez l’indiquer ci-dessous',
 
 	// I
-	'icone_relancer_signataire' => 'Relancer le signataire',
+	'icone_relancer_signataire' => 'Relancer la signataire',
 	'icone_relancer_signataires' => 'Relancer les signataires',
 	'icone_suivi_petitions' => 'Suivre/gérer les pétitions',
 	'icone_supprimer_signature' => 'Supprimer cette signature',
@@ -78,7 +80,7 @@ Merci de votre participation
 	'sans_nom' => 'Anonyme',
 	'signatures_article' => 'Signatures de l’article :',
 	'signatures_aucune' => 'Aucune',
-	'signatures_meme_auteur' => 'Les signatures du même auteur',
+	'signatures_meme_auteur' => 'Les signatures de la même auteure',
 	'signatures_meme_site' => 'Les signatures avec le même site',
 	'signatures_poubelle' => 'Supprimées',
 	'signatures_prop' => 'En attente',

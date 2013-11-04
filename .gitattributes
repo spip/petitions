@@ -18,8 +18,10 @@ lang/paquet-petitions_de.php -text
 lang/paquet-petitions_en.php -text
 lang/paquet-petitions_es.php -text
 lang/paquet-petitions_fa.php -text
+lang/paquet-petitions_fr_fem.php -text
 lang/paquet-petitions_it.php -text
 lang/paquet-petitions_nl.php -text
+lang/paquet-petitions_pt.php -text
 lang/paquet-petitions_pt_br.php -text
 lang/paquet-petitions_ru.php -text
 lang/paquet-petitions_sk.php -text
@@ -49,6 +51,7 @@ lang/petitions_fi.php -text
 lang/petitions_fon.php -text
 lang/petitions_fr.php -text
 lang/petitions_fr_biblio.php -text
+lang/petitions_fr_fem.php -text
 lang/petitions_fr_tu.php -text
 lang/petitions_gl.php -text
 lang/petitions_hac.php -text
