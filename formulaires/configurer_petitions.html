@@ -10,13 +10,19 @@
 		#ACTION_FORMULAIRE
 		<div class="editer-groupe">
 			#SET{name,activer_petitions}#SET{erreurs,#ENV**{erreurs/#GET{name}}}
+			#SET{value,#ENV{#GET{name},non}}
 			<div class="editer editer_[(#GET{name})][ (#GET{obli})][ (#GET{erreurs}|oui)erreur]">
-				<label><:petitions:champ_activer_petitions_label:></label>[
+				<label><:petitions:cfg_activer_petitions_label:></label>[
 				<span class='erreur_message'>(#GET{erreurs})</span>
 				]<div class="choix">
-					<input type="checkbox" name="#GET{name}" id="#GET{name}_oui" value="oui"
-						[(#ENV{#GET{name}}|=={oui}|oui)checked="checked"]
-					/><label for="#GET{name}_oui"><:petitions:champ_activer_petitions_label_oui:></label>
+					<input type="radio" name="#GET{name}" id="#GET{name}_oui" value="oui"
+						[(#GET{value}|=={oui}|oui)checked="checked"]
+					/><label for="#GET{name}_oui"><:petitions:cfg_activer_petitions_label_oui:></label>
+				</div>
+				<div class="choix">
+					<input type="radio" name="#GET{name}" id="#GET{name}_non" value="non"
+						[(#GET{value}|=={non}|oui)checked="checked"]
+					/><label for="#GET{name}_non"><:petitions:cfg_activer_petitions_label_non:></label>
 				</div>
 			</div>
 		</div>
