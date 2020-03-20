@@ -40,6 +40,26 @@ function petitions_afficher_config_objet($flux) {
 	return $flux;
 }
 
+/**
+ * Utilisation du pipeline affiche milieu
+ *
+ * Ajoute le formulaire de configuration des pétitions sur la configuration des contenus
+ *
+ * @pipeline affiche_milieu
+ *
+ * @param array $flux
+ *     Données du pipeline
+ * @return array
+ *     Données du pipeline
+ */
+function petitions_affiche_milieu($flux) {
+
+	if ($flux['args']['exec'] == 'configurer_contenu') {
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', array('configurer' => 'configurer_petitions'));
+	}
+
+	return $flux;
+}
 
 /**
  * Optimiser la base de données en supprimant les pétitions orphelines

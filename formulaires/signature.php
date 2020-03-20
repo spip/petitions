@@ -16,8 +16,12 @@ if (!defined("_ECRIRE_INC_VERSION")) {
 
 function formulaires_signature_charger_dist($id_article) {
 	include_spip('base/abstract_sql');
+	include_spip('inc/config');
 	// pas de petition, pas de signature
-	if (!$r = sql_fetsel('*', 'spip_petitions', 'id_article=' . intval($id_article))) {
+	if (
+		(lire_config('petitions/activer_petitions') !== 'oui')
+		or !$r = sql_fetsel('*', 'spip_petitions', 'id_article=' . intval($id_article))
+	) {
 		return false;
 	}
 	// pas de signature sur une petition fermee (TODO) ou poubelle

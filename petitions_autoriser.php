@@ -30,7 +30,8 @@ function petitions_autoriser() { }
 /**
  * Autorisation de modérer une pétition
  *
- * Il faut avoir droit de modifier l'objet qui reçoit la pétition
+ * Il faut que les pétitions soient activées globalement
+ * et avoir droit de modifier l'objet qui reçoit la pétition
  *
  * @param  string $faire Action demandée
  * @param  string $type Type d'objet sur lequel appliquer l'action
@@ -40,8 +41,11 @@ function petitions_autoriser() { }
  * @return bool          true s'il a le droit, false sinon
  **/
 function autoriser_modererpetition_dist($faire, $type, $id, $qui, $opt) {
-	return
-		autoriser('modifier', $type, $id, $qui, $opt);
+	include_spip('inc/config');
+	$autoriser =
+		(lire_config('petitions/activer_petitions') === 'oui')
+		and autoriser('modifier', $type, $id, $qui, $opt);
+	return $autoriser;
 }
 
 /**
@@ -122,7 +126,8 @@ function autoriser_signature_modifier_dist($faire, $type, $id, $qui, $opt) {
 /**
  * Autorisation de voir la page controler_petition
  *
- * S'il y a au moins une signature
+ * Il faut que les pétitions soient activées globalement
+ * et qu'il y ait au moins une signature
  *
  * @param  string $faire Action demandée
  * @param  string $type Type d'objet sur lequel appliquer l'action
@@ -132,7 +137,11 @@ function autoriser_signature_modifier_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
  **/
 function autoriser_controlerpetition_voir_dist($faire, $type, $id, $qui, $opt) {
-	return sql_countsel('spip_signatures') > 0;
+	include_spip('inc/config');
+	$autoriser =
+		(lire_config('petitions/activer_petitions') === 'oui')
+		and sql_countsel('spip_signatures') > 0;
+	return $autoriser;
 }
 
 /**
