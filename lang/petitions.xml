@@ -88,7 +88,9 @@
 	<langue code="oc_gsc" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=oc_gsc" total="71" traduits="15" relire="0" modifs="6" nouveaux="50" pourcent="21.13" />
 	<langue code="oc_lms" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=oc_lms" total="71" traduits="16" relire="0" modifs="5" nouveaux="50" pourcent="22.54" />
 	<langue code="oc_lnc" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=oc_lnc" total="71" traduits="18" relire="0" modifs="6" nouveaux="47" pourcent="25.35" />
-	<langue code="oc_ni" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=oc_ni" total="71" traduits="18" relire="0" modifs="6" nouveaux="47" pourcent="25.35" />
+	<langue code="oc_ni" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=oc_ni" total="71" traduits="46" relire="0" modifs="0" nouveaux="25" pourcent="64.79">
+		<traducteur nom="Bastian" lien="https://trad.spip.net/auteur/bastian" />
+	</langue>
 	<langue code="oc_ni_la" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=oc_ni_la" total="71" traduits="16" relire="0" modifs="6" nouveaux="49" pourcent="22.54" />
 	<langue code="oc_ni_mis" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=oc_ni_mis" total="71" traduits="67" relire="0" modifs="0" nouveaux="4" pourcent="94.37">
 		<traducteur nom="sylvain" lien="https://trad.spip.net/auteur/sylvain" />
