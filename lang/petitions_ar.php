@@ -23,6 +23,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_petition_activee' => 'تم تفعيل العريضة',
 	'bouton_radio_supprimer_petition' => 'حذف العريضة',
 
+	// C
+	'cfg_activer_petitions_label' => 'هل تريدون تفعيل العرائض؟',
+	'cfg_activer_petitions_label_non' => 'تعطيل العرائض',
+	'cfg_activer_petitions_label_oui' => 'تفعيل العرائض',
+	'cfg_petitions_explication' => 'يمكن تفعيل واجهة إدارة العرائض للمقالات.',
+
 	// F
 	'filtre' => 'مرشح:',
 	'form_pet_adresse_site' => 'عنوان موقعك',
