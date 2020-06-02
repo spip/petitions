@@ -23,6 +23,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_petition_activee' => 'Pétition activée',
 	'bouton_radio_supprimer_petition' => 'Supprimer la pétition',
 
+	// C
+	'cfg_activer_petitions_label' => 'Souhaites-tu activer les pétitions ?',
+	'cfg_activer_petitions_label_non' => 'Désactiver les pétitions',
+	'cfg_activer_petitions_label_oui' => 'Activer les pétitions',
+	'cfg_petitions_explication' => 'Tu peux activer l’interface de gestion des pétitions pour les articles.',
+
 	// F
 	'filtre' => 'Filtre :',
 	'form_pet_adresse_site' => 'Adresse URL de ton site',
