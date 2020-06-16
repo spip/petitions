@@ -23,6 +23,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_petition_activee' => '請願が有効になりました。',
 	'bouton_radio_supprimer_petition' => '請願を削除する',
 
+	// C
+	'cfg_activer_petitions_label' => 'Souhaitez-vous activer les pétitions ?
+請願を有効しますか。',
+	'cfg_activer_petitions_label_non' => '請願を無効にする',
+	'cfg_activer_petitions_label_oui' => '請願有効にする',
+	'cfg_petitions_explication' => 'Vous pouvez activer l’interface de gestion des pétitions pour les articles.
+記事のために、請願を設定するインタフェースを有効できます。',
+
 	// F
 	'filtre' => 'フィルター：',
 	'form_pet_adresse_site' => 'あなたのサイトのURL',

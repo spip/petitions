@@ -70,7 +70,7 @@
 		<traducteur nom="phante" lien="https://trad.spip.net/auteur/phante" />
 	</langue>
 	<langue code="it_fem" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=it_fem" total="71" traduits="18" relire="0" modifs="7" nouveaux="46" pourcent="25.35" />
-	<langue code="ja" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ja" total="71" traduits="67" relire="0" modifs="0" nouveaux="4" pourcent="94.37">
+	<langue code="ja" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ja" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="origenius" lien="https://trad.spip.net/auteur/origenius" />
 	</langue>
 	<langue code="km" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=km" total="71" traduits="18" relire="0" modifs="7" nouveaux="46" pourcent="25.35" />
