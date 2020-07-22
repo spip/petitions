@@ -102,6 +102,20 @@ function petitions_declarer_tables_objets_sql($tables) {
 		'statut' => array(
 			array('champ' => 'statut', 'publie' => 'publie,off', 'previsu' => 'publie,off', 'exception' => array('statut')),
 		),
+		'champs_editables' => array(
+			'email_unique',
+			'site_obli',
+			'site_unique',
+			'message',
+			'texte',
+		),
+		'champs_versionnes' => array(
+			'email_unique',
+			'site_obli',
+			'site_unique',
+			'message',
+			'texte',
+		),
 	);
 
 	$tables['spip_signatures'] = array(
@@ -155,6 +169,20 @@ function petitions_declarer_tables_objets_sql($tables) {
 			'nom_site' => 2,
 			'url_site' => 4,
 			'message' => 1
+		),
+		'champs_editables' => array(
+			'nom_email',
+			'ad_email',
+			'nom_site',
+			'url_site',
+			'message',
+		),
+		'champs_versionnes' => array(
+			'nom_email',
+			'ad_email',
+			'nom_site',
+			'url_site',
+			'message',
 		),
 		'icone_objet' => 'petition',
 	);

@@ -57,15 +57,10 @@ function petition_modifier($id_petition, $set = null) {
 	$err = '';
 
 	include_spip('inc/modifier');
+	include_spip('inc/filtres');
 	$c = collecter_requests(
-	// white list
-		array(
-			"email_unique",
-			"site_obli",
-			"site_unique",
-			"message",
-			"texte"
-		),
+		// white list
+		objet_info('petition', 'champs_editables'),
 		// black list
 		array('statut', 'id_article'),
 		// donnees eventuellement fournies

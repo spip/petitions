@@ -51,16 +51,10 @@ function signature_modifier($id_signature, $set = null) {
 	$err = '';
 
 	include_spip('inc/modifier');
+	include_spip('inc/filtres');
 	$c = collecter_requests(
-	// white list
-		array(
-			"nom_email",
-			"ad_email",
-			"nom_site",
-			"url_site",
-			"message",
-			"statut"
-		),
+		// white list
+		objet_info('signature', 'champs_editables'),
 		// black list
 		array('statut', 'id_petition', 'date_time'),
 		// donnees eventuellement fournies
