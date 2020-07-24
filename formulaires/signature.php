@@ -283,7 +283,7 @@ function signature_a_confirmer($id_article, $url_page, $nom, $mail, $site, $url,
 function signature_test_pass() {
 	include_spip('inc/acces');
 	do {
-		$passw = creer_pass_aleatoire();
+		$passw = creer_pass_aleatoire(10);
 	} while (sql_countsel('spip_signatures', "statut='$passw'") > 0);
 
 	return $passw;
