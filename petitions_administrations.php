@@ -65,6 +65,9 @@ function petitions_upgrade($nom_meta_base_version, $version_cible) {
 		array('sql_alter', "TABLE spip_signatures DROP INDEX id_article"),
 		array('sql_alter', "TABLE spip_signatures DROP id_article"),
 	);
+	$maj['1.1.7'] = array(
+		array('petitions_maj_117'),
+	);
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
@@ -95,4 +98,19 @@ function petitions_vider_tables($nom_meta_base_version) {
 	sql_drop_table("spip_signatures");
 
 	effacer_meta($nom_meta_base_version);
+}
+
+/**
+ * Mise à jour 1.1.7
+ *
+ * @return void
+ */
+function petitions_maj_117() {
+	// S'il y a au moins une pétition publiée, on active la gestion.
+	// Autrement, c'est désactivé comme c'est le cas par défaut pour les nouvelles installations.
+	include_spip('base/abstract_sql');
+	if (sql_countsel('spip_petitions', 'statut=' . sql_quote('publie'))) {
+		include_spip('inc/config');
+		ecrire_config('petitions/activer_petitions', 'oui');
+	}
 }

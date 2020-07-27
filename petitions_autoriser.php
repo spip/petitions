@@ -30,7 +30,7 @@ function petitions_autoriser() { }
 /**
  * Autorisation de modérer une pétition
  *
- * Il faut que les pétitions soient activées globalement
+ * Il faut que les pétitions soient activées globalement ou qu'il y en ait au moins une
  * et avoir droit de modifier l'objet qui reçoit la pétition
  *
  * @param  string $faire Action demandée
@@ -42,8 +42,10 @@ function petitions_autoriser() { }
  **/
 function autoriser_modererpetition_dist($faire, $type, $id, $qui, $opt) {
 	include_spip('inc/config');
+	$activer_petitions = (lire_config('petitions/activer_petitions') === 'oui');
+	$nb_petitions = sql_countsel('spip_petitions', 'id_article=' . intval($id));
 	$autoriser =
-		(lire_config('petitions/activer_petitions') === 'oui')
+		($activer_petitions or $nb_petitions > 0)
 		and autoriser('modifier', $type, $id, $qui, $opt);
 	return $autoriser;
 }

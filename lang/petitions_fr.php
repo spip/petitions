@@ -16,15 +16,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_indiquer_site' => 'indiquer obligatoirement un site web',
 	'bouton_checkbox_signature_unique_email' => 'une seule signature par adresse email',
 	'bouton_checkbox_signature_unique_site' => 'une seule signature par site web',
-	'bouton_radio_activer_petition' => 'Activer la pétition',
+	'bouton_radio_activer_petition' => 'Activer les pétitions',
 	'bouton_radio_pas_petition' => 'Pas de pétition',
 	'bouton_radio_petition_activee' => 'Pétition activée',
 	'bouton_radio_supprimer_petition' => 'Supprimer la pétition',
 
 	// C
-	'cfg_activer_petitions_label' => 'Souhaitez-vous activer les pétitions ?',
-	'cfg_activer_petitions_label_non' => 'Désactiver les pétitions',
-	'cfg_activer_petitions_label_oui' => 'Activer les pétitions',
+	'cfg_activer_petitions_label' => 'Souhaitez-vous gérer les pétitions ?',
+	'cfg_activer_petitions_label_non' => 'Désactiver la gestion des pétitions',
+	'cfg_activer_petitions_label_oui' => 'Activer la gestion des pétitions',
 	'cfg_petitions_explication' => 'Vous pouvez activer l’interface de gestion des pétitions pour les articles.',
 
 	// F
