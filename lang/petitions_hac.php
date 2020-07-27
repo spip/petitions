@@ -10,7 +10,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_radio_activer_petition' => 'چالاککەردەی قەواڵەی',
+	'bouton_radio_activer_petition' => 'چالاککەردەی قەواڵەی', # MODIF
 	'bouton_radio_pas_petition' => 'هیچ قەۋاڵیـۋ نییا',
 	'bouton_radio_petition_activee' => 'قەۋاڵە چالاك کریان',
 	'bouton_radio_supprimer_petition' => 'قەۋاڵەکەی بسەڕۆ',

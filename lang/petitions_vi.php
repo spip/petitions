@@ -10,7 +10,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_radio_activer_petition' => 'Dùng thỉnh nguyện thư ',
+	'bouton_radio_activer_petition' => 'Dùng thỉnh nguyện thư ', # MODIF
 	'bouton_radio_pas_petition' => 'Không dùng',
 	'bouton_radio_petition_activee' => 'Thỉnh nguyện thư được mở lên',
 	'bouton_radio_supprimer_petition' => 'Xóa thỉnh nguyện thư',

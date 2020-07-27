@@ -18,7 +18,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_indiquer_site' => 'необходимо указать название сайта',
 	'bouton_checkbox_signature_unique_email' => 'один email - одна подпись',
 	'bouton_checkbox_signature_unique_site' => 'один сайт = одна подпись',
-	'bouton_radio_activer_petition' => 'Включить петиции',
+	'bouton_radio_activer_petition' => 'Включить петиции', # MODIF
 	'bouton_radio_pas_petition' => 'Отключить петиции',
 	'bouton_radio_petition_activee' => 'Включить петиции',
 	'bouton_radio_supprimer_petition' => 'Удалить петиции',

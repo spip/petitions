@@ -18,15 +18,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_indiquer_site' => 'verplicht een website aan te geven',
 	'bouton_checkbox_signature_unique_email' => 'slechts één ondertekening per email adres',
 	'bouton_checkbox_signature_unique_site' => 'één enkele ondertekening per website',
-	'bouton_radio_activer_petition' => 'Petitie activeren',
+	'bouton_radio_activer_petition' => 'Petitie activeren', # MODIF
 	'bouton_radio_pas_petition' => 'Geen petitie',
 	'bouton_radio_petition_activee' => 'Petitie geactiveerd',
 	'bouton_radio_supprimer_petition' => 'De petitie verwijderen',
 
 	// C
-	'cfg_activer_petitions_label' => 'Wil je de petities activeren?',
-	'cfg_activer_petitions_label_non' => 'Petities stoppen',
-	'cfg_activer_petitions_label_oui' => 'Petities activeren',
+	'cfg_activer_petitions_label' => 'Wil je de petities activeren?', # MODIF
+	'cfg_activer_petitions_label_non' => 'Petities stoppen', # MODIF
+	'cfg_activer_petitions_label_oui' => 'Petities activeren', # MODIF
 	'cfg_petitions_explication' => 'Je kunt de beheerspagina voor petities van artikelen activeren.',
 
 	// F

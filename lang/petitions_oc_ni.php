@@ -14,15 +14,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
 	'bouton_checkbox_envoi_message' => 'possibilitat de mandar un messatge',
-	'bouton_radio_activer_petition' => 'Activar la peticion',
+	'bouton_radio_activer_petition' => 'Activar la peticion', # MODIF
 	'bouton_radio_pas_petition' => 'Minga de peticion',
 	'bouton_radio_petition_activee' => 'Peticion activada',
 	'bouton_radio_supprimer_petition' => 'Suprimir la peticion',
 
 	// C
-	'cfg_activer_petitions_label' => 'Volètz activar li peticions?',
-	'cfg_activer_petitions_label_non' => 'Desactivar li peticions',
-	'cfg_activer_petitions_label_oui' => 'Activar li peticions',
+	'cfg_activer_petitions_label' => 'Volètz activar li peticions?', # MODIF
+	'cfg_activer_petitions_label_non' => 'Desactivar li peticions', # MODIF
+	'cfg_activer_petitions_label_oui' => 'Activar li peticions', # MODIF
 
 	// F
 	'filtre' => 'Filtre:',

@@ -10,7 +10,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_radio_activer_petition' => 'សកម្ម បណ្តឹងជំទាស់',
+	'bouton_radio_activer_petition' => 'សកម្ម បណ្តឹងជំទាស់', # MODIF
 	'bouton_radio_pas_petition' => 'គ្មាន បណ្តឹងជំទាស់',
 	'bouton_radio_petition_activee' => 'បានសកម្ម បណ្តឹងជំទាស់',
 	'bouton_radio_supprimer_petition' => 'លុបចេញ បណ្តឹងជំទាស់',

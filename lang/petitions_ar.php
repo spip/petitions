@@ -18,15 +18,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_indiquer_site' => 'يجب تحديد موقع على النسيج',
 	'bouton_checkbox_signature_unique_email' => 'توقيع واحد فقط لكل عنوان بريدي',
 	'bouton_checkbox_signature_unique_site' => 'توقيع واحد فقط لكل موقع',
-	'bouton_radio_activer_petition' => 'تفعيل العريضة',
+	'bouton_radio_activer_petition' => 'تفعيل العريضة', # MODIF
 	'bouton_radio_pas_petition' => 'بدون عرائض',
 	'bouton_radio_petition_activee' => 'تم تفعيل العريضة',
 	'bouton_radio_supprimer_petition' => 'حذف العريضة',
 
 	// C
-	'cfg_activer_petitions_label' => 'هل تريدون تفعيل العرائض؟',
-	'cfg_activer_petitions_label_non' => 'تعطيل العرائض',
-	'cfg_activer_petitions_label_oui' => 'تفعيل العرائض',
+	'cfg_activer_petitions_label' => 'هل تريدون تفعيل العرائض؟', # MODIF
+	'cfg_activer_petitions_label_non' => 'تعطيل العرائض', # MODIF
+	'cfg_activer_petitions_label_oui' => 'تفعيل العرائض', # MODIF
 	'cfg_petitions_explication' => 'يمكن تفعيل واجهة إدارة العرائض للمقالات.',
 
 	// F

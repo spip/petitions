@@ -10,7 +10,7 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// B
-	'bouton_radio_activer_petition' => 'Mèt yon pétisyon',
+	'bouton_radio_activer_petition' => 'Mèt yon pétisyon', # MODIF
 	'bouton_radio_pas_petition' => 'Okenn petisyon',
 	'bouton_radio_petition_activee' => 'Petisyon ka mache',
 	'bouton_radio_supprimer_petition' => 'Kraez petisyon nan',
