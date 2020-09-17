@@ -24,10 +24,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_supprimer_petition' => 'Delete the petition',
 
 	// C
-	'cfg_activer_petitions_label' => 'Do you wish to enable petitions management?',
-	'cfg_activer_petitions_label_non' => 'Disable petitions management',
-	'cfg_activer_petitions_label_oui' => 'Enable petitions management',
-	'cfg_petitions_explication' => 'You can enable the interface to manage petitions on the articles.',
+	'cfg_activer_petitions_label' => 'Do you wish to enable petitions management?', # MODIF
+	'cfg_activer_petitions_label_non' => 'Disable petitions management', # MODIF
+	'cfg_activer_petitions_label_oui' => 'Enable petitions management', # MODIF
+	'cfg_petitions_explication' => 'You can enable the interface to manage petitions on the articles.', # MODIF
 
 	// F
 	'filtre' => 'Filter:',

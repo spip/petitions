@@ -29,7 +29,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'cfg_activer_petitions_label_non' => '請願を無効にする', # MODIF
 	'cfg_activer_petitions_label_oui' => '請願有効にする', # MODIF
 	'cfg_petitions_explication' => 'Vous pouvez activer l’interface de gestion des pétitions pour les articles.
-記事のために、請願を設定するインタフェースを有効できます。',
+記事のために、請願を設定するインタフェースを有効できます。', # MODIF
 
 	// F
 	'filtre' => 'フィルター：',

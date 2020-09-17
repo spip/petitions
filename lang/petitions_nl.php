@@ -27,7 +27,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'cfg_activer_petitions_label' => 'Wil je de petities activeren?', # MODIF
 	'cfg_activer_petitions_label_non' => 'Petities stoppen', # MODIF
 	'cfg_activer_petitions_label_oui' => 'Petities activeren', # MODIF
-	'cfg_petitions_explication' => 'Je kunt de beheerspagina voor petities van artikelen activeren.',
+	'cfg_petitions_explication' => 'Je kunt de beheerspagina voor petities van artikelen activeren.', # MODIF
 
 	// F
 	'filtre' => 'Filter:',

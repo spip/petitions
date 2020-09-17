@@ -5,7 +5,7 @@
 	url="https://trad.spip.net"
 	source="https://git.spip.net/spip/petitions.git"
 	reference="fr">
-	<langue code="ar" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ar" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+	<langue code="ar" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ar" total="71" traduits="67" relire="0" modifs="4" nouveaux="0" pourcent="94.37">
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 	</langue>
 	<langue code="ast" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ast" total="71" traduits="17" relire="0" modifs="7" nouveaux="47" pourcent="23.94" />
@@ -28,7 +28,7 @@
 		<traducteur nom="Torsten Willmann" lien="https://trad.spip.net/auteur/torsten-willmann" />
 	</langue>
 	<langue code="el" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=el" total="71" traduits="15" relire="0" modifs="6" nouveaux="50" pourcent="21.13" />
-	<langue code="en" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=en" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+	<langue code="en" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=en" total="71" traduits="67" relire="0" modifs="4" nouveaux="0" pourcent="94.37">
 		<traducteur nom="Benitron" lien="https://trad.spip.net/auteur/benitron" />
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
 		<traducteur nom="kent1" lien="https://trad.spip.net/auteur/kent1" />
@@ -54,7 +54,7 @@
 		<traducteur nom="denisb" lien="https://trad.spip.net/auteur/denisb" />
 		<traducteur nom="touti" lien="https://trad.spip.net/auteur/touti" />
 	</langue>
-	<langue code="fr_tu" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=fr_tu" total="71" traduits="67" relire="0" modifs="4" nouveaux="0" pourcent="94.37">
+	<langue code="fr_tu" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=fr_tu" total="71" traduits="66" relire="0" modifs="5" nouveaux="0" pourcent="92.96">
 		<traducteur nom="RealET" lien="https://trad.spip.net/auteur/realet" />
 	</langue>
 	<langue code="gl" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=gl" total="71" traduits="17" relire="0" modifs="7" nouveaux="47" pourcent="23.94" />
@@ -70,7 +70,7 @@
 		<traducteur nom="phante" lien="https://trad.spip.net/auteur/phante" />
 	</langue>
 	<langue code="it_fem" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=it_fem" total="71" traduits="17" relire="0" modifs="8" nouveaux="46" pourcent="23.94" />
-	<langue code="ja" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ja" total="71" traduits="67" relire="0" modifs="4" nouveaux="0" pourcent="94.37">
+	<langue code="ja" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ja" total="71" traduits="66" relire="0" modifs="5" nouveaux="0" pourcent="92.96">
 		<traducteur nom="origenius" lien="https://trad.spip.net/auteur/origenius" />
 	</langue>
 	<langue code="km" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=km" total="71" traduits="17" relire="0" modifs="8" nouveaux="46" pourcent="23.94" />
@@ -82,7 +82,7 @@
 	<langue code="nap" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=nap" total="71" traduits="11" relire="0" modifs="7" nouveaux="53" pourcent="15.49" />
 	<langue code="nb" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=nb" total="71" traduits="17" relire="0" modifs="6" nouveaux="48" pourcent="23.94" />
 	<langue code="ne" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ne" total="71" traduits="11" relire="0" modifs="7" nouveaux="53" pourcent="15.49" />
-	<langue code="nl" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=nl" total="71" traduits="67" relire="0" modifs="4" nouveaux="0" pourcent="94.37">
+	<langue code="nl" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=nl" total="71" traduits="66" relire="0" modifs="5" nouveaux="0" pourcent="92.96">
 		<traducteur nom="Hanjo" lien="https://trad.spip.net/auteur/hanjo" />
 		<traducteur nom="Suske" lien="https://trad.spip.net/auteur/suske" />
 	</langue>

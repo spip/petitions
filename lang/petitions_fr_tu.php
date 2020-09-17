@@ -27,7 +27,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'cfg_activer_petitions_label' => 'Souhaites-tu activer les pétitions ?', # MODIF
 	'cfg_activer_petitions_label_non' => 'Désactiver les pétitions', # MODIF
 	'cfg_activer_petitions_label_oui' => 'Activer les pétitions', # MODIF
-	'cfg_petitions_explication' => 'Tu peux activer l’interface de gestion des pétitions pour les articles.',
+	'cfg_petitions_explication' => 'Tu peux activer l’interface de gestion des pétitions pour les articles.', # MODIF
 
 	// F
 	'filtre' => 'Filtre :',
