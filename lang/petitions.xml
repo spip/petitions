@@ -28,9 +28,10 @@
 		<traducteur nom="Torsten Willmann" lien="https://trad.spip.net/auteur/torsten-willmann" />
 	</langue>
 	<langue code="el" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=el" total="71" traduits="15" relire="0" modifs="6" nouveaux="50" pourcent="21.13" />
-	<langue code="en" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=en" total="71" traduits="67" relire="0" modifs="4" nouveaux="0" pourcent="94.37">
+	<langue code="en" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=en" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="Benitron" lien="https://trad.spip.net/auteur/benitron" />
 		<traducteur nom="George" lien="https://trad.spip.net/auteur/جورج-قندلفت" />
+		<traducteur nom="jack31" lien="https://trad.spip.net/auteur/jack31" />
 		<traducteur nom="kent1" lien="https://trad.spip.net/auteur/kent1" />
 		<traducteur nom="sQuonk" lien="https://trad.spip.net/auteur/squonk" />
 	</langue>
