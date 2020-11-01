@@ -24,10 +24,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_radio_supprimer_petition' => 'حذف العريضة',
 
 	// C
-	'cfg_activer_petitions_label' => 'هل تريدون تفعيل إدارة العرائض؟', # MODIF
-	'cfg_activer_petitions_label_non' => 'تعطيل إدارة  العرائض', # MODIF
-	'cfg_activer_petitions_label_oui' => 'تفعيل إدارة العرائض', # MODIF
-	'cfg_petitions_explication' => 'يمكن تفعيل واجهة إدارة العرائض للمقالات.', # MODIF
+	'cfg_activer_petitions_label' => 'هل تريدون استخدام العرائض؟',
+	'cfg_activer_petitions_label_non' => 'عدم استخدام  العرائض',
+	'cfg_activer_petitions_label_oui' => 'استخدام العرائض',
+	'cfg_petitions_explication' => 'يمكن تفعيل عريضة على كل مقال في الموقع.',
 
 	// F
 	'filtre' => 'مرشح:',
