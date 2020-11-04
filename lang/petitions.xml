@@ -56,7 +56,7 @@
 		<traducteur nom="denisb" lien="https://trad.spip.net/auteur/denisb" />
 		<traducteur nom="touti" lien="https://trad.spip.net/auteur/touti" />
 	</langue>
-	<langue code="fr_tu" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=fr_tu" total="71" traduits="66" relire="0" modifs="5" nouveaux="0" pourcent="92.96">
+	<langue code="fr_tu" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=fr_tu" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="RealET" lien="https://trad.spip.net/auteur/realet" />
 	</langue>
 	<langue code="gl" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=gl" total="71" traduits="17" relire="0" modifs="7" nouveaux="47" pourcent="23.94" />
