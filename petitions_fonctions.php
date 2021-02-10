@@ -32,17 +32,26 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *    Pile complétée du code à générer
  */
 function balise_PETITION_dist($p) {
-	$nom = $p->id_boucle;
-	$p->code = "quete_petitions(" .
-		champ_sql('id_article', $p) .
-		",'" .
-		$p->boucles[$nom]->type_requete .
-		"','" .
-		$nom .
-		"','" .
-		$p->boucles[$nom]->sql_serveur .
-		"', \$Cache)";
-	$p->interdire_scripts = false;
+	$nom = index_boucle($p);
+	if ($nom === '' or empty($p->boucles[$nom])) {
+		$msg = array(
+			'zbug_champ_hors_boucle',
+			array('champ' => '#PETITION')
+		);
+		erreur_squelette($msg, $p);
+	}
+	else {
+		$p->code = "quete_petitions(" .
+			champ_sql('id_article', $p) .
+			",'" .
+			$p->boucles[$nom]->type_requete .
+			"','" .
+			$nom .
+			"','" .
+			$p->boucles[$nom]->sql_serveur .
+			"', \$Cache)";
+		$p->interdire_scripts = false;
+	}
 
 	return $p;
 }
