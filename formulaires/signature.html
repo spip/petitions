@@ -22,7 +22,7 @@
 			<div class='editer saisie_adresse_email[ (#ENV*{erreurs}|table_valeur{session_email}|oui)erreur] obligatoire'>
 				<label for="session_email"><:petitions:form_pet_votre_email:> <:info_obligatoire_02:></label>
 				[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{session_email})</span>]
-				<input type="text" class="text" name="session_email" id="session_email" value="#ENV{session_email}" size="30" />
+				<input type="[(#HTML5|?{email,text})]" class="text email" name="session_email" id="session_email" value="#ENV{session_email}" size="30" />
 			</div>
 		</div>
 	</fieldset>
