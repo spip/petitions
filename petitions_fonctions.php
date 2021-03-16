@@ -33,7 +33,10 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  */
 function balise_PETITION_dist($p) {
 	$nom = index_boucle($p);
-	if ($nom === '' or empty($p->boucles[$nom])) {
+	if (
+		($nom === '' or empty($p->boucles[$nom]))
+		and $p->nom_champ !== 'FORMULAIRE_SIGNATURE'
+	) {
 		$msg = array(
 			'zbug_champ_hors_boucle',
 			array('champ' => '#PETITION')
@@ -41,15 +44,22 @@ function balise_PETITION_dist($p) {
 		erreur_squelette($msg, $p);
 	}
 	else {
-		$p->code = "quete_petitions(" .
-			champ_sql('id_article', $p) .
-			",'" .
-			$p->boucles[$nom]->type_requete .
-			"','" .
-			$nom .
-			"','" .
-			$p->boucles[$nom]->sql_serveur .
-			"', \$Cache)";
+		if (!empty($p->boucles[$nom])) {
+			$p->code = "quete_petitions(" .
+				champ_sql('id_article', $p)
+				. ",'" .$p->boucles[$nom]->type_requete . "'" 
+				. ",'$nom'," 
+				. "'" . $p->boucles[$nom]->sql_serveur . "'"
+				. ", \$Cache)";
+		} else {
+			$p->code = "quete_petitions(" .
+				champ_sql('id_article', $p)
+				. ",''" 
+				. ",'$nom'," 
+				. "\$connect"
+				. ", \$Cache)";
+		}
+
 		$p->interdire_scripts = false;
 	}
 
