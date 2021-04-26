@@ -105,7 +105,8 @@
 	<langue code="pt" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=pt" total="71" traduits="66" relire="0" modifs="1" nouveaux="4" pourcent="92.96">
 		<traducteur nom="Cláudia Anjos Lopes" lien="https://trad.spip.net/auteur/claudia_a_lopes" />
 	</langue>
-	<langue code="pt_br" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=pt_br" total="71" traduits="66" relire="0" modifs="1" nouveaux="4" pourcent="92.96">
+	<langue code="pt_br" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=pt_br" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="Ricardo Porto" lien="https://trad.spip.net/auteur/ricardo-porto" />
 		<traducteur nom="telopa" lien="https://trad.spip.net/auteur/telopa" />
 	</langue>
 	<langue code="ro" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=ro" total="71" traduits="17" relire="0" modifs="7" nouveaux="47" pourcent="23.94" />
