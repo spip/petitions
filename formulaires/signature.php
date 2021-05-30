@@ -104,7 +104,7 @@ function formulaires_signature_verifier_dist($id_article) {
 			$erreurs['signature_url_site'] = _T('form_indiquer_nom_site');
 		} elseif (!count($erreurs)) {
 			include_spip('inc/distant');
-			if (!recuperer_page($url_site, false, true, 0)) {
+			if (!recuperer_url($url_site, ['methode' => 'HEAD'])) {
 				$erreurs['signature_url_site'] = _T('petitions:form_pet_url_invalide');
 			}
 		}
