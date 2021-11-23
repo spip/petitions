@@ -37,7 +37,7 @@
 				<div class='editer saisie_signature_url_site[ (#ENV*{erreurs}|table_valeur{signature_url_site}|oui)erreur][(#ENV{site_obli})obligatoire]'>
 				<label for="signature_url_site"><:petitions:form_pet_adresse_site:>[(#ENV{site_obli}) <:info_obligatoire_02:>]</label>
 				[<span class="erreur_message">(#ENV*{erreurs}|table_valeur{signature_url_site})</span>]
-				<input type="text" class="text" name="signature_url_site" id="signature_url_site" placeholder="http://" value="#ENV{signature_url_site}" size="30" />
+				<input type="text" class="text" name="signature_url_site" id="signature_url_site" placeholder="https://" value="#ENV{signature_url_site}" size="30" />
 			</div>
 		</div>
 	</fieldset>
