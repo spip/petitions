@@ -18,10 +18,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'bouton_checkbox_indiquer_site' => 'devi inserire il nome di un sito web',
 	'bouton_checkbox_signature_unique_email' => 'solo un’adesione per email',
 	'bouton_checkbox_signature_unique_site' => 'solo una adesione per sito web',
-	'bouton_radio_activer_petition' => 'Attiva la petizione', # MODIF
+	'bouton_radio_activer_petition' => 'Attiva la petizione',
 	'bouton_radio_pas_petition' => 'Nessuna petizione',
 	'bouton_radio_petition_activee' => 'Petizione attivata',
 	'bouton_radio_supprimer_petition' => 'Elimina la petizione',
+
+	// C
+	'cfg_activer_petitions_label' => 'Vuoi usare le petizioni?',
+	'cfg_activer_petitions_label_non' => 'Non usare le petizioni',
+	'cfg_activer_petitions_label_oui' => 'Utilizza le petizioni',
+	'cfg_petitions_explication' => 'Puoi attivare una petizione in ogni articolo del sito',
 
 	// F
 	'filtre' => 'Filtro:',

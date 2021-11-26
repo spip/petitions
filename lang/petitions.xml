@@ -69,7 +69,8 @@
 	<langue code="hu" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=hu" total="71" traduits="17" relire="0" modifs="7" nouveaux="47" pourcent="23.94" />
 	<langue code="id" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=id" total="71" traduits="15" relire="0" modifs="6" nouveaux="50" pourcent="21.13" />
 	<langue code="is" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=is" total="71" traduits="1" relire="0" modifs="0" nouveaux="70" pourcent="1.41" />
-	<langue code="it" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=it" total="71" traduits="66" relire="0" modifs="1" nouveaux="4" pourcent="92.96">
+	<langue code="it" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=it" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
+		<traducteur nom="Alberto" lien="https://trad.spip.net/auteur/alberto" />
 		<traducteur nom="phante" lien="https://trad.spip.net/auteur/phante" />
 	</langue>
 	<langue code="it_fem" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=it_fem" total="71" traduits="17" relire="0" modifs="8" nouveaux="46" pourcent="23.94" />
