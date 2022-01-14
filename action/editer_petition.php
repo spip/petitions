@@ -152,7 +152,7 @@ function petition_instituer($id_petition, $c) {
 	#$date_ancienne = $date = $row['date_time'];
 	$champs = array();
 
-	$s = isset($c['statut']) ? $c['statut'] : $statut;
+	$s = $c['statut'] ?? $statut;
 
 	// cf autorisations dans inc/petition_instituer
 	if ($s != $statut /*OR ($d AND $d != $date)*/) {
@@ -184,7 +184,7 @@ function petition_instituer($id_petition, $c) {
 		)
 	);
 
-	if (!count($champs)) {
+	if (!(is_countable($champs) ? count($champs) : 0)) {
 		return;
 	}
 

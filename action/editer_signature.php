@@ -143,8 +143,8 @@ function signature_instituer($id_signature, $c, $calcul_rub = true) {
 	$date_ancienne = $date = $row['date_time'];
 	$champs = array();
 
-	$d = isset($c['date_time']) ? $c['date_time'] : null;
-	$s = isset($c['statut']) ? $c['statut'] : $statut;
+	$d = $c['date_time'] ?? null;
+	$s = $c['statut'] ?? $statut;
 
 	// cf autorisations dans inc/signature_instituer
 	if ($s != $statut or ($d and $d != $date)) {
@@ -179,7 +179,7 @@ function signature_instituer($id_signature, $c, $calcul_rub = true) {
 		)
 	);
 
-	if (!count($champs)) {
+	if (!(is_countable($champs) ? count($champs) : 0)) {
 		return;
 	}
 

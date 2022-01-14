@@ -46,7 +46,7 @@ function action_traiter_lot_signature_dist($arg = null) {
 
 		if ($where) {
 			$rows = sql_allfetsel("id_signature", "spip_signatures", $where);
-			if (!count($rows)) {
+			if (!(is_countable($rows) ? count($rows) : 0)) {
 				return;
 			}
 			$rows = array_column($rows, 'id_signature');

@@ -88,6 +88,6 @@ if (!function_exists('quete_petitions')) {
 		$cache['varia']['pet' . $id_article] = 1;
 
 		# ne pas retourner '' car le texte sert aussi de presence
-		return $retour ? $retour : ' ';
+		return $retour ?: ' ';
 	}
 }

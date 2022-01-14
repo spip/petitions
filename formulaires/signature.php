@@ -30,8 +30,8 @@ function formulaires_signature_charger_dist($id_article) {
 	$valeurs = array(
 		'id_petition' => $id_petition,
 		'id_article' => $id_article, # pour compat
-		'session_nom' => isset($GLOBALS['visiteur_session']['session_nom']) ? $GLOBALS['visiteur_session']['session_nom'] : (isset($GLOBALS['visiteur_session']['nom']) ? $GLOBALS['visiteur_session']['nom'] : ''),
-		'session_email' => isset($GLOBALS['visiteur_session']['session_email']) ? $GLOBALS['visiteur_session']['session_email'] : (isset($GLOBALS['visiteur_session']['email']) ? $GLOBALS['visiteur_session']['email'] : ''),
+		'session_nom' => $GLOBALS['visiteur_session']['session_nom'] ?? $GLOBALS['visiteur_session']['nom'] ?? '',
+		'session_email' => $GLOBALS['visiteur_session']['session_email'] ?? $GLOBALS['visiteur_session']['email'] ?? '',
 		'signature_nom_site' => '',
 		'signature_url_site' => '',
 		'_texte' => $r['texte'],
@@ -59,6 +59,7 @@ function affiche_reponse_confirmation($confirm) {
 }
 
 function formulaires_signature_verifier_dist($id_article) {
+	$url_site = null;
 	$erreurs = array();
 	$oblis = array('session_nom', 'session_email');
 	include_spip('base/abstract_sql');
