@@ -166,12 +166,11 @@ function formulaires_signature_traiter_dist($id_article) {
 	return ['message_ok' => $reponse];
 }
 
-//
-// Recevabilite de la signature d'une petition
-// les controles devraient mantenant etre faits dans formulaires_signature_verifier()
-//
-
-// https://code.spip.net/@inc_controler_signature_dist
+/**
+ * Recevabilite de la signature d'une petition
+ * 
+ * les controles devraient mantenant etre faits dans formulaires_signature_verifier()
+ */
 function inc_controler_signature_dist($id_article, $nom, $mail, $message, $site, $url_site, $url_page) {
 
 	// tout le monde est la.
@@ -219,7 +218,6 @@ function inc_controler_signature_dist($id_article, $nom, $mail, $message, $site,
 	return $ret;
 }
 
-// https://code.spip.net/@signature_a_confirmer
 function signature_a_confirmer($id_article, $url_page, $nom, $mail, $site, $url, $msg, $lang, &$statut) {
 	include_spip('inc/texte');
 	include_spip('inc/filtres');
@@ -299,9 +297,9 @@ function signature_a_confirmer($id_article, $url_page, $nom, $mail, $site, $url,
 	return false; # erreur d'envoi de l'email
 }
 
-// Creer un mot de passe aleatoire et verifier qu'il est unique
-// dans la table des signatures
-// https://code.spip.net/@signature_test_pass
+/** 
+ * Creer un mot de passe aleatoire et verifier qu'il est unique dans la table des signatures
+ */
 function signature_test_pass() {
 	include_spip('inc/acces');
 	do {

@@ -26,13 +26,11 @@ include_spip('base/abstract_sql');
 // car on doit obtenir la jointure avec la table des petitions pour verifier
 // si une petition est attachee a l'article.
 
-// https://code.spip.net/@balise_FORMULAIRE_SIGNATURE
 function balise_FORMULAIRE_SIGNATURE($p) {
 	return calculer_balise_dynamique($p, 'FORMULAIRE_SIGNATURE', ['id_article', 'petition']);
 }
 
 // Verification des arguments (contexte + filtres)
-// https://code.spip.net/@balise_FORMULAIRE_SIGNATURE_stat
 function balise_FORMULAIRE_SIGNATURE_stat($args, $context_compil) {
 
 	// pas d'id_article => erreur de contexte
