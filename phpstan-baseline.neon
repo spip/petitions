@@ -1,0 +1,642 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 7
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function _action_auteur not found\\.$#"
+			count: 2
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function action_confirmer_signature_dist\\(\\) should return string but return statement is missing\\.$#"
+			count: 1
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 7
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function session_set not found\\.$#"
+			count: 2
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function spip_connect not found\\.$#"
+			count: 1
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 2
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 3
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function suivre_invalideur not found\\.$#"
+			count: 2
+			path: action/confirmer_signature.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 1
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 2
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function collecter_requests not found\\.$#"
+			count: 2
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 6
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function objet_info not found\\.$#"
+			count: 1
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function objet_modifier_champs not found\\.$#"
+			count: 1
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function pipeline not found\\.$#"
+			count: 4
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function redirige_url_ecrire not found\\.$#"
+			count: 1
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 1
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function sql_insertq not found\\.$#"
+			count: 1
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function sql_updateq not found\\.$#"
+			count: 1
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function suivre_invalideur not found\\.$#"
+			count: 2
+			path: action/editer_petition.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 2
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function collecter_requests not found\\.$#"
+			count: 2
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 5
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function objet_info not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function objet_modifier_champs not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function pipeline not found\\.$#"
+			count: 4
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_count not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_delete not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_fetch not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_free not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_in not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_insertq not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_select not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function sql_updateq not found\\.$#"
+			count: 1
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function suivre_invalideur not found\\.$#"
+			count: 2
+			path: action/editer_signature.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 2
+			path: action/relancer_signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: action/relancer_signature.php
+
+		-
+			message: "#^Function generer_url_entite_absolue not found\\.$#"
+			count: 1
+			path: action/relancer_signature.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: action/relancer_signature.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 1
+			path: action/relancer_signature.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 1
+			path: action/relancer_signature.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 2
+			path: action/supprimer_signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: action/supprimer_signature.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: action/supprimer_signature.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 1
+			path: action/supprimer_signature.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 2
+			path: action/traiter_lot_signature.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 1
+			path: action/traiter_lot_signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 2
+			path: action/traiter_lot_signature.php
+
+		-
+			message: "#^Function sql_allfetsel not found\\.$#"
+			count: 1
+			path: action/traiter_lot_signature.php
+
+		-
+			message: "#^Function sql_in not found\\.$#"
+			count: 1
+			path: action/traiter_lot_signature.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 1
+			path: action/valider_signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: action/valider_signature.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: action/valider_signature.php
+
+		-
+			message: "#^Function calculer_balise_dynamique not found\\.$#"
+			count: 1
+			path: balise/formulaire_signature.php
+
+		-
+			message: "#^Function erreur_squelette not found\\.$#"
+			count: 1
+			path: balise/formulaire_signature.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: balise/formulaire_signature.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 7
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 2
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 5
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function set_request not found\\.$#"
+			count: 1
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function singulier_ou_pluriel not found\\.$#"
+			count: 1
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function sql_countsel not found\\.$#"
+			count: 1
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 1
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 2
+			path: formulaires/activer_petition_article.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 19
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 14
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 3
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function creer_pass_aleatoire not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function email_valide not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 11
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function lang_select not found\\.$#"
+			count: 2
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function parametre_url not found\\.$#"
+			count: 2
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function recuperer_url not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function refuser_traiter_formulaire_ajax not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function set_request not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function spip_connect not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function sql_countsel not found\\.$#"
+			count: 3
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 4
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 2
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function suivre_invalideur not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function textebrut not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function typo not found\\.$#"
+			count: 1
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function vider_url not found\\.$#"
+			count: 2
+			path: formulaires/signature.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function ecrire_config not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function ecrire_meta not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function effacer_meta not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 4
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function maj_plugin not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function sql_allfetsel not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function sql_countsel not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function sql_drop_table not found\\.$#"
+			count: 2
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 1
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function sql_updateq not found\\.$#"
+			count: 2
+			path: petitions_administrations.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 4
+			path: petitions_autoriser.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: petitions_autoriser.php
+
+		-
+			message: "#^Function lire_config not found\\.$#"
+			count: 2
+			path: petitions_autoriser.php
+
+		-
+			message: "#^Function sql_countsel not found\\.$#"
+			count: 2
+			path: petitions_autoriser.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 3
+			path: petitions_autoriser.php
+
+		-
+			message: "#^Function champ_sql not found\\.$#"
+			count: 2
+			path: petitions_fonctions.php
+
+		-
+			message: "#^Function erreur_squelette not found\\.$#"
+			count: 1
+			path: petitions_fonctions.php
+
+		-
+			message: "#^Function index_boucle not found\\.$#"
+			count: 1
+			path: petitions_fonctions.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 1
+			path: petitions_fonctions.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: petitions_options.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 1
+			path: petitions_pipelines.php
+
+		-
+			message: "#^Function id_table_objet not found\\.$#"
+			count: 1
+			path: petitions_pipelines.php
+
+		-
+			message: "#^Function recuperer_fond not found\\.$#"
+			count: 2
+			path: petitions_pipelines.php
+
+		-
+			message: "#^Function sql_date_proche not found\\.$#"
+			count: 1
+			path: petitions_pipelines.php
+
+		-
+			message: "#^Function sql_delete not found\\.$#"
+			count: 2
+			path: petitions_pipelines.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 2
+			path: petitions_pipelines.php
+
+		-
+			message: "#^Function table_objet not found\\.$#"
+			count: 1
+			path: petitions_pipelines.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: tests/unit/abstract_sql/99_sql_types_tables_id.php
+
+		-
+			message: "#^Function tester_fun not found\\.$#"
+			count: 1
+			path: tests/unit/abstract_sql/99_sql_types_tables_id.php
+
+		-
+			message: "#^Function find_in_path not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/id_table_objet.php
+
+		-
+			message: "#^Function tester_fun not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/id_table_objet.php
+
+		-
+			message: "#^Function find_in_path not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/objet_type.php
+
+		-
+			message: "#^Function tester_fun not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/objet_type.php
+
+		-
+			message: "#^Function find_in_path not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/table_objet.php
+
+		-
+			message: "#^Function tester_fun not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/table_objet.php
+
+		-
+			message: "#^Function find_in_path not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/table_objet_sql.php
+
+		-
+			message: "#^Function tester_fun not found\\.$#"
+			count: 1
+			path: tests/unit/connect_sql/table_objet_sql.php
+
