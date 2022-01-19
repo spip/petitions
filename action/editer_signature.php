@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -27,7 +27,7 @@ function action_editer_signature_dist($arg = null) {
 	if (!$id_signature = intval($arg)) {
 		$id_petition = _request('id_petition');
 		if (!($id_petition)) {
-			return array(0, '');
+			return [0, ''];
 		}
 		$id_signature = signature_inserer($id_petition);
 	}
@@ -37,7 +37,7 @@ function action_editer_signature_dist($arg = null) {
 		$err = signature_modifier($id_signature);
 	}
 
-	return array($id_signature, $err);
+	return [$id_signature, $err];
 }
 
 /**
@@ -56,23 +56,27 @@ function signature_modifier($id_signature, $set = null) {
 		// white list
 		objet_info('signature', 'champs_editables'),
 		// black list
-		array('statut', 'id_petition', 'date_time'),
+		['statut', 'id_petition', 'date_time'],
 		// donnees eventuellement fournies
 		$set
 	);
 
-	if ($err = objet_modifier_champs('signature', $id_signature,
-		array(
+	if (
+		$err = objet_modifier_champs(
+			'signature',
+			$id_signature,
+			[
 			'data' => $set,
-			'nonvide' => array('nom_email' => _T('info_sans_titre'))
-		),
-		$c)
+			'nonvide' => ['nom_email' => _T('info_sans_titre')]
+			],
+			$c
+		)
 	) {
 		return $err;
 	}
 
 	// Modification de statut
-	$c = collecter_requests(array('statut', 'id_petition', 'date_time'), array(), $set);
+	$c = collecter_requests(['statut', 'id_petition', 'date_time'], [], $set);
 	$err .= signature_instituer($id_signature, $c);
 
 	return $err;
@@ -92,36 +96,38 @@ function signature_inserer($id_petition, $set = null) {
 		return 0;
 	}
 
-	$champs = array(
+	$champs = [
 		'id_petition' => $id_petition,
 		'statut' => 'prepa',
 		'date_time' => date('Y-m-d H:i:s')
-	);
+	];
 
 	if ($set) {
 		$champs = array_merge($champs, $set);
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_insertion',
-		array(
-			'args' => array(
+	$champs = pipeline(
+		'pre_insertion',
+		[
+			'args' => [
 				'table' => 'spip_signatures',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
-	$id_signature = sql_insertq("spip_signatures", $champs);
+	$id_signature = sql_insertq('spip_signatures', $champs);
 
-	pipeline('post_insertion',
-		array(
-			'args' => array(
+	pipeline(
+		'post_insertion',
+		[
+			'args' => [
 				'table' => 'spip_signatures',
 				'id_objet' => $id_signature
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	return $id_signature;
@@ -136,12 +142,14 @@ function signature_instituer($id_signature, $c, $calcul_rub = true) {
 	include_spip('inc/autoriser');
 	include_spip('inc/modifier');
 
-	$row = sql_fetsel("S.statut, S.date_time, P.id_article",
-		"spip_signatures AS S JOIN spip_petitions AS P ON S.id_petition=P.id_petition",
-		"S.id_signature=" . intval($id_signature));
+	$row = sql_fetsel(
+		'S.statut, S.date_time, P.id_article',
+		'spip_signatures AS S JOIN spip_petitions AS P ON S.id_petition=P.id_petition',
+		'S.id_signature=' . intval($id_signature)
+	);
 	$statut_ancien = $statut = $row['statut'];
 	$date_ancienne = $date = $row['date_time'];
-	$champs = array();
+	$champs = [];
 
 	$d = $c['date_time'] ?? null;
 	$s = $c['statut'] ?? $statut;
@@ -167,16 +175,17 @@ function signature_instituer($id_signature, $c, $calcul_rub = true) {
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_edition',
-		array(
-			'args' => array(
+	$champs = pipeline(
+		'pre_edition',
+		[
+			'args' => [
 				'table' => 'spip_signatures',
 				'id_objet' => $id_signature,
 				'action' => 'instituer',
 				'statut_ancien' => $statut_ancien,
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	if (!(is_countable($champs) ? count($champs) : 0)) {
@@ -192,22 +201,25 @@ function signature_instituer($id_signature, $c, $calcul_rub = true) {
 	suivre_invalideur("id='article/" . $row['id_article'] . "'");
 
 	// Pipeline
-	pipeline('post_edition',
-		array(
-			'args' => array(
+	pipeline(
+		'post_edition',
+		[
+			'args' => [
 				'table' => 'spip_signatures',
 				'id_objet' => $id_signature,
 				'action' => 'instituer',
 				'statut_ancien' => $statut_ancien,
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	// Notifications
 	if ($notifications = charger_fonction('notifications', 'inc')) {
-		$notifications('instituersignature', $id_signature,
-			array('statut' => $statut, 'statut_ancien' => $statut_ancien, 'date' => $date)
+		$notifications(
+			'instituersignature',
+			$id_signature,
+			['statut' => $statut, 'statut_ancien' => $statut_ancien, 'date' => $date]
 		);
 	}
 
@@ -229,9 +241,9 @@ function signature_instituer($id_signature, $c, $calcul_rub = true) {
  * @return array
  */
 function signature_entrop($where) {
-	$entrop = array();
+	$entrop = [];
 	$where .= " AND statut='publie'";
-	$res = sql_select('id_signature', 'spip_signatures', $where, '', "date_time desc");
+	$res = sql_select('id_signature', 'spip_signatures', $where, '', 'date_time desc');
 	$n = sql_count($res);
 	if ($n > 1) {
 		while ($r = sql_fetch($res)) {

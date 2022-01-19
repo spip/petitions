@@ -16,7 +16,7 @@
  * @package SPIP\Petitions\Actions
  **/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -43,7 +43,7 @@ function action_editer_petition_dist($arg = null) {
 		$err = petition_modifier($id_petition);
 	}
 
-	return array($id_petition, $err);
+	return [$id_petition, $err];
 }
 
 /**
@@ -62,22 +62,26 @@ function petition_modifier($id_petition, $set = null) {
 		// white list
 		objet_info('petition', 'champs_editables'),
 		// black list
-		array('statut', 'id_article'),
+		['statut', 'id_article'],
 		// donnees eventuellement fournies
 		$set
 	);
 
-	if ($err = objet_modifier_champs('petition', $id_petition,
-		array(
+	if (
+		$err = objet_modifier_champs(
+			'petition',
+			$id_petition,
+			[
 			'data' => $set,
-		),
-		$c)
+			],
+			$c
+		)
 	) {
 		return $err;
 	}
 
 	// changement d'article ou de statut ?
-	$c = collecter_requests(array('statut', 'id_article'), array(), $set);
+	$c = collecter_requests(['statut', 'id_article'], [], $set);
 	$err .= petition_instituer($id_petition, $c);
 
 	return $err;
@@ -99,34 +103,36 @@ function petition_inserer($id_article, $set = null) {
 		return 0;
 	}
 
-	$champs = array(
+	$champs = [
 		'id_article' => $id_article,
-	);
+	];
 
 	if ($set) {
 		$champs = array_merge($champs, $set);
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_insertion',
-		array(
-			'args' => array(
+	$champs = pipeline(
+		'pre_insertion',
+		[
+			'args' => [
 				'table' => 'spip_petitions',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
-	$id_petition = sql_insertq("spip_petitions", $champs);
+	$id_petition = sql_insertq('spip_petitions', $champs);
 
-	pipeline('post_insertion',
-		array(
-			'args' => array(
+	pipeline(
+		'post_insertion',
+		[
+			'args' => [
 				'table' => 'spip_petitions',
 				'id_objet' => $id_petition
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	return $id_petition;
@@ -147,10 +153,10 @@ function petition_instituer($id_petition, $c) {
 	include_spip('inc/autoriser');
 	include_spip('inc/modifier');
 
-	$row = sql_fetsel("id_article,statut", "spip_petitions", "id_petition=" . intval($id_petition));
+	$row = sql_fetsel('id_article,statut', 'spip_petitions', 'id_petition=' . intval($id_petition));
 	$statut_ancien = $statut = $row['statut'];
 	#$date_ancienne = $date = $row['date_time'];
-	$champs = array();
+	$champs = [];
 
 	$s = $c['statut'] ?? $statut;
 
@@ -172,16 +178,17 @@ function petition_instituer($id_petition, $c) {
 	}
 
 	// Envoyer aux plugins
-	$champs = pipeline('pre_edition',
-		array(
-			'args' => array(
+	$champs = pipeline(
+		'pre_edition',
+		[
+			'args' => [
 				'table' => 'spip_petitions',
 				'id_objet' => $id_petition,
 				'action' => 'instituer',
 				'statut_ancien' => $statut_ancien,
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	if (!(is_countable($champs) ? count($champs) : 0)) {
@@ -197,22 +204,25 @@ function petition_instituer($id_petition, $c) {
 	suivre_invalideur("id='article/" . $row['id_article'] . "'");
 
 	// Pipeline
-	pipeline('post_edition',
-		array(
-			'args' => array(
+	pipeline(
+		'post_edition',
+		[
+			'args' => [
 				'table' => 'spip_petitions',
 				'id_objet' => $id_petition,
 				'action' => 'instituer',
 				'statut_ancien' => $statut_ancien,
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	// Notifications
 	if ($notifications = charger_fonction('notifications', 'inc')) {
-		$notifications('instituerpetition', $id_petition,
-			array('statut' => $statut, 'statut_ancien' => $statut_ancien)
+		$notifications(
+			'instituerpetition',
+			$id_petition,
+			['statut' => $statut, 'statut_ancien' => $statut_ancien]
 		);
 	}
 

@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }  #securite
 
@@ -23,12 +23,12 @@ include_spip('base/abstract_sql');
 // Contexte necessaire lors de la compilation
 
 // Il *faut* demander petition, meme si on ne s'en sert pas dans l'affichage,
-// car on doit obtenir la jointure avec la table des petitions pour verifier 
+// car on doit obtenir la jointure avec la table des petitions pour verifier
 // si une petition est attachee a l'article.
 
 // https://code.spip.net/@balise_FORMULAIRE_SIGNATURE
 function balise_FORMULAIRE_SIGNATURE($p) {
-	return calculer_balise_dynamique($p, 'FORMULAIRE_SIGNATURE', array('id_article', 'petition'));
+	return calculer_balise_dynamique($p, 'FORMULAIRE_SIGNATURE', ['id_article', 'petition']);
 }
 
 // Verification des arguments (contexte + filtres)
@@ -37,13 +37,13 @@ function balise_FORMULAIRE_SIGNATURE_stat($args, $context_compil) {
 
 	// pas d'id_article => erreur de contexte
 	if (!$args[0]) {
-		$msg = array(
+		$msg = [
 			'zbug_champ_hors_motif',
-			array(
+			[
 				'champ' => 'FORMULAIRE_SIGNATURE',
 				'motif' => 'ARTICLES'
-			)
-		);
+			]
+		];
 		erreur_squelette($msg, $context_compil);
 
 		return '';

@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -25,15 +25,16 @@ function action_traiter_lot_signature_dist($arg = null) {
 	 * $arg contient l'action relancer/supprimer/valider
 	 * les id sont dans un tableau non signe ids[]
 	 */
-	if (preg_match(",^(\w+)$,", $arg, $match)
-		and in_array($statut = $match[1], array('relancer', 'supprimer', 'valider'))
+	if (
+		preg_match(',^(\w+)$,', $arg, $match)
+		and in_array($statut = $match[1], ['relancer', 'supprimer', 'valider'])
 		and autoriser('modererlot', 'petition')
 	) {
 		$where = '';
 		if (intval($id_petition = _request('id_petition'))) {
-			$where = "id_petition=" . intval($id_petition);
+			$where = 'id_petition=' . intval($id_petition);
 			// pour relancer ou valider on ne prend que celles en attente
-			if (in_array($statut, array('relancer', 'valider'))) {
+			if (in_array($statut, ['relancer', 'valider'])) {
 				$where .= " AND statut!='publie' AND statut!='poubelle'";
 			}
 		} else {
@@ -45,12 +46,12 @@ function action_traiter_lot_signature_dist($arg = null) {
 		}
 
 		if ($where) {
-			$rows = sql_allfetsel("id_signature", "spip_signatures", $where);
+			$rows = sql_allfetsel('id_signature', 'spip_signatures', $where);
 			if (!(is_countable($rows) ? count($rows) : 0)) {
 				return;
 			}
 			$rows = array_column($rows, 'id_signature');
-			if ($action = charger_fonction($statut . "_signature", 'action', true)) {
+			if ($action = charger_fonction($statut . '_signature', 'action', true)) {
 				foreach ($rows as $id_signature) {
 					$action($id_signature);
 				}

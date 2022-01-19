@@ -27,13 +27,14 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  * @return array
  */
 function petitions_afficher_config_objet($flux) {
-	if ((($type = $flux['args']['type']) == 'article')
+	if (
+		(($type = $flux['args']['type']) == 'article')
 		and ($id = $flux['args']['id'])
 	) {
 		if (autoriser('modererpetition', $type, $id)) {
 			$table = table_objet($type);
 			$id_table_objet = id_table_objet($type);
-			$flux['data'] .= recuperer_fond("prive/configurer/petitionner", array($id_table_objet => $id));
+			$flux['data'] .= recuperer_fond('prive/configurer/petitionner', [$id_table_objet => $id]);
 		}
 	}
 
@@ -55,7 +56,7 @@ function petitions_afficher_config_objet($flux) {
 function petitions_affiche_milieu($flux) {
 
 	if ($flux['args']['exec'] == 'configurer_contenu') {
-		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', array('configurer' => 'configurer_petitions'));
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', ['configurer' => 'configurer_petitions']);
 	}
 
 	return $flux;
@@ -75,16 +76,18 @@ function petitions_optimiser_base_disparus($flux) {
 	// Signatures poubelles
 	//
 
-	sql_delete("spip_petitions", "statut=" . sql_quote('poubelle') . " AND maj < " . sql_quote($mydate));
+	sql_delete('spip_petitions', 'statut=' . sql_quote('poubelle') . ' AND maj < ' . sql_quote($mydate));
 
 	// rejeter les signatures non confirmees trop vieilles (20jours)
 	if (!defined('_PETITIONS_DELAI_SIGNATURES_REJETEES')) {
 		define('_PETITIONS_DELAI_SIGNATURES_REJETEES', 20);
 	}
-	sql_delete("spip_signatures", "NOT (statut='publie' OR statut='poubelle') AND NOT(" . sql_date_proche('date_time',
-			-_PETITIONS_DELAI_SIGNATURES_REJETEES, ' DAY') . ')');
+	sql_delete('spip_signatures', "NOT (statut='publie' OR statut='poubelle') AND NOT(" . sql_date_proche(
+		'date_time',
+		-_PETITIONS_DELAI_SIGNATURES_REJETEES,
+		' DAY'
+	) . ')');
 
 
 	return $flux;
-
 }

@@ -24,7 +24,8 @@ if (!defined('_ECRIRE_INC_VERSION')) {
  *
  * @pipeline autoriser
  */
-function petitions_autoriser() { }
+function petitions_autoriser() {
+}
 
 
 /**
@@ -63,8 +64,11 @@ function autoriser_modererpetition_dist($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_signature_publier($faire, $type, $id, $qui, $opt) {
-	$id_article = sql_getfetsel('P.id_article',
-		'spip_signatures AS S JOIN spip_petitions AS P ON P.id_petition=S.id_petition', 'S.id_signature=' . intval($id));
+	$id_article = sql_getfetsel(
+		'P.id_article',
+		'spip_signatures AS S JOIN spip_petitions AS P ON P.id_petition=S.id_petition',
+		'S.id_signature=' . intval($id)
+	);
 
 	return
 		autoriser('modererpetition', 'article', $id_article, $qui, $opt);
@@ -83,8 +87,11 @@ function autoriser_signature_publier($faire, $type, $id, $qui, $opt) {
  * @return bool          true s'il a le droit, false sinon
  */
 function autoriser_signature_supprimer($faire, $type, $id, $qui, $opt) {
-	$id_article = sql_getfetsel('P.id_article',
-		'spip_signatures AS S JOIN spip_petitions AS P ON P.id_petition=S.id_petition', 'S.id_signature=' . intval($id));
+	$id_article = sql_getfetsel(
+		'P.id_article',
+		'spip_signatures AS S JOIN spip_petitions AS P ON P.id_petition=S.id_petition',
+		'S.id_signature=' . intval($id)
+	);
 
 	return
 		autoriser('modererpetition', 'article', $id_article, $qui, $opt);
@@ -105,7 +112,7 @@ function autoriser_signature_supprimer($faire, $type, $id, $qui, $opt) {
 function autoriser_signature_relancer($faire, $type, $id, $qui, $opt) {
 	$statut = sql_getfetsel('statut', 'spip_signatures', 'id_signature=' . intval($id));
 
-	return ($qui['id_auteur'] && !in_array($statut, array('poubelle', 'publie')));
+	return ($qui['id_auteur'] && !in_array($statut, ['poubelle', 'publie']));
 }
 
 /**

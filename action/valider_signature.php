@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -22,6 +22,6 @@ function action_valider_signature_dist($id_signature = null) {
 
 	if (autoriser('publier', 'signature', $id_signature)) {
 		include_spip('action/editer_signature');
-		signature_modifier($id_signature, array('statut' => 'publie'));
+		signature_modifier($id_signature, ['statut' => 'publie']);
 	}
 }

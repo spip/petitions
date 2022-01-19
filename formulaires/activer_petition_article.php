@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -22,7 +22,7 @@ if (!defined("_ECRIRE_INC_VERSION")) {
  */
 function formulaires_activer_petition_article_charger_dist($id_article) {
 
-	$valeurs = array();
+	$valeurs = [];
 
 	$valeurs['editable'] = true;
 
@@ -33,18 +33,20 @@ function formulaires_activer_petition_article_charger_dist($id_article) {
 	include_spip('inc/presentation');
 	include_spip('base/abstract_sql');
 	$nb_signatures = 0;
-	$petition = sql_fetsel("*", "spip_petitions", "id_article=$id_article");
+	$petition = sql_fetsel('*', 'spip_petitions', "id_article=$id_article");
 	if ($petition) {
-		$nb_signatures = sql_countsel("spip_signatures", "id_petition=" . intval($petition['id_petition']));
+		$nb_signatures = sql_countsel('spip_signatures', 'id_petition=' . intval($petition['id_petition']));
 	}
 
 	$valeurs['id_article'] = $id_article;
 	$valeurs['petition'] = $petition;
-	$valeurs['_controle_petition'] = $nb_signatures ? singulier_ou_pluriel($nb_signatures, 'petitions:une_signature',
-		'petitions:nombre_signatures') : "";
+	$valeurs['_controle_petition'] = $nb_signatures ? singulier_ou_pluriel(
+		$nb_signatures,
+		'petitions:une_signature',
+		'petitions:nombre_signatures'
+	) : '';
 
 	return $valeurs;
-
 }
 
 /**
@@ -60,7 +62,7 @@ function formulaires_activer_petition_article_traiter_dist($id_article) {
 	if (autoriser('modererpetition', 'article', $id_article)) {
 		switch (_request('change_petition')) {
 			case 'on':
-				foreach (array('email_unique', 'site_obli', 'site_unique', 'message') as $k) {
+				foreach (['email_unique', 'site_obli', 'site_unique', 'message'] as $k) {
 					if (_request($k) != 'oui') {
 						set_request($k, 'non');
 					}
@@ -73,25 +75,24 @@ function formulaires_activer_petition_article_traiter_dist($id_article) {
 
 				petition_modifier(
 					$id_petition,
-					array(
+					[
 						'email_unique' => _request('email_unique'),
 						'site_obli' => _request('site_obli'),
 						'site_unique' => _request('site_unique'),
 						'message' => _request('message'),
 						'texte' => _request('texte_petition'),
 						'statut' => 'publie',
-					)
+					]
 				);
 				break;
 			case 'off':
 				if ($id_petition = sql_getfetsel('id_petition', 'spip_petitions', 'id_article=' . intval($id_article))) {
 					include_spip('action/editer_petition');
-					petition_modifier($id_petition, array('statut' => 'poubelle'));
+					petition_modifier($id_petition, ['statut' => 'poubelle']);
 				}
 				break;
 		}
 	}
 
-	return array('message_ok' => _T('config_info_enregistree'));
-
+	return ['message_ok' => _T('config_info_enregistree')];
 }

@@ -37,27 +37,27 @@ function balise_PETITION_dist($p) {
 		($nom === '' or empty($p->boucles[$nom]))
 		and $p->nom_champ !== 'FORMULAIRE_SIGNATURE'
 	) {
-		$msg = array(
+		$msg = [
 			'zbug_champ_hors_boucle',
-			array('champ' => '#PETITION')
-		);
+			['champ' => '#PETITION']
+		];
 		erreur_squelette($msg, $p);
 	}
 	else {
 		if (!empty($p->boucles[$nom])) {
-			$p->code = "quete_petitions(" .
+			$p->code = 'quete_petitions(' .
 				champ_sql('id_article', $p)
-				. ",'" .$p->boucles[$nom]->type_requete . "'" 
-				. ",'$nom'," 
+				. ",'" . $p->boucles[$nom]->type_requete . "'"
+				. ",'$nom',"
 				. "'" . $p->boucles[$nom]->sql_serveur . "'"
-				. ", \$Cache)";
+				. ', $Cache)';
 		} else {
-			$p->code = "quete_petitions(" .
+			$p->code = 'quete_petitions(' .
 				champ_sql('id_article', $p)
-				. ",''" 
-				. ",'$nom'," 
-				. "\$connect"
-				. ", \$Cache)";
+				. ",''"
+				. ",'$nom',"
+				. '$connect'
+				. ', $Cache)';
 		}
 
 		$p->interdire_scripts = false;
@@ -78,8 +78,16 @@ if (!function_exists('quete_petitions')) {
 	 * @return array|bool|null|string
 	 */
 	function quete_petitions($id_article, $table, $id_boucle, $serveur, &$cache) {
-		$retour = sql_getfetsel('texte', 'spip_petitions', ("id_article=" . intval($id_article)), '', array(), '', '',
-			$serveur);
+		$retour = sql_getfetsel(
+			'texte',
+			'spip_petitions',
+			('id_article=' . intval($id_article)),
+			'',
+			[],
+			'',
+			'',
+			$serveur
+		);
 
 		if ($retour === null) {
 			return '';

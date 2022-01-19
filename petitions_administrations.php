@@ -27,7 +27,8 @@ function petitions_upgrade($nom_meta_base_version, $version_cible) {
 	// pour gerer l'historique des installations SPIP <=2.1
 	if (!isset($GLOBALS['meta'][$nom_meta_base_version])) {
 		$trouver_table = charger_fonction('trouver_table', 'base');
-		if ($desc = $trouver_table('spip_signatures')
+		if (
+			$desc = $trouver_table('spip_signatures')
 			and isset($desc['field']['id_article'])
 		) {
 			ecrire_meta($nom_meta_base_version, '1.0.0');
@@ -35,39 +36,39 @@ function petitions_upgrade($nom_meta_base_version, $version_cible) {
 		// si pas de table en base, on fera une simple creation de base
 	}
 
-	$maj = array();
-	$maj['create'] = array(
-		array('maj_tables', array('spip_petitions', 'spip_signatures')),
-	);
+	$maj = [];
+	$maj['create'] = [
+		['maj_tables', ['spip_petitions', 'spip_signatures']],
+	];
 
-	$maj['1.1.0'] = array(
-		array('sql_alter', "TABLE spip_petitions DROP PRIMARY KEY"),
-	);
-	$maj['1.1.1'] = array(
-		array('sql_alter', "TABLE spip_petitions ADD UNIQUE id_article (id_article)"),
-	);
-	$maj['1.1.2'] = array(
-		array('sql_alter', "TABLE spip_petitions ADD id_petition BIGINT(21) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST"),
-		array('sql_alter', "TABLE spip_petitions ADD PRIMARY KEY (id_petition)"),
-	);
-	$maj['1.1.3'] = array(
-		array('sql_alter', "TABLE spip_petitions ADD statut VARCHAR (10) DEFAULT 'publie' NOT NULL"),
-	);
-	$maj['1.1.4'] = array(
-		array('sql_alter', "TABLE spip_signatures ADD id_petition bigint(21) DEFAULT '0' NOT NULL"),
-		array('sql_alter', "TABLE spip_signatures ADD INDEX id_petition (id_petition)"),
-		array('sql_updateq', 'spip_signatures', array('id_petition' => -1)),
-	);
-	$maj['1.1.5'] = array(
-		array('upgrade_index_signatures'),
-	);
-	$maj['1.1.6'] = array(
-		array('sql_alter', "TABLE spip_signatures DROP INDEX id_article"),
-		array('sql_alter', "TABLE spip_signatures DROP id_article"),
-	);
-	$maj['1.1.7'] = array(
-		array('petitions_maj_117'),
-	);
+	$maj['1.1.0'] = [
+		['sql_alter', 'TABLE spip_petitions DROP PRIMARY KEY'],
+	];
+	$maj['1.1.1'] = [
+		['sql_alter', 'TABLE spip_petitions ADD UNIQUE id_article (id_article)'],
+	];
+	$maj['1.1.2'] = [
+		['sql_alter', 'TABLE spip_petitions ADD id_petition BIGINT(21) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST'],
+		['sql_alter', 'TABLE spip_petitions ADD PRIMARY KEY (id_petition)'],
+	];
+	$maj['1.1.3'] = [
+		['sql_alter', "TABLE spip_petitions ADD statut VARCHAR (10) DEFAULT 'publie' NOT NULL"],
+	];
+	$maj['1.1.4'] = [
+		['sql_alter', "TABLE spip_signatures ADD id_petition bigint(21) DEFAULT '0' NOT NULL"],
+		['sql_alter', 'TABLE spip_signatures ADD INDEX id_petition (id_petition)'],
+		['sql_updateq', 'spip_signatures', ['id_petition' => -1]],
+	];
+	$maj['1.1.5'] = [
+		['upgrade_index_signatures'],
+	];
+	$maj['1.1.6'] = [
+		['sql_alter', 'TABLE spip_signatures DROP INDEX id_article'],
+		['sql_alter', 'TABLE spip_signatures DROP id_article'],
+	];
+	$maj['1.1.7'] = [
+		['petitions_maj_117'],
+	];
 
 	include_spip('base/upgrade');
 	maj_plugin($nom_meta_base_version, $version_cible, $maj);
@@ -81,9 +82,9 @@ function upgrade_index_signatures() {
 			if (!$id_petition) {
 				include_spip('action/editer_petition');
 				$id_petition = petition_inserer($id_article);
-				sql_updateq('spip_petitions', array('statut' => 'poubelle'), 'id_petition=' . $id_petition);
+				sql_updateq('spip_petitions', ['statut' => 'poubelle'], 'id_petition=' . $id_petition);
 			}
-			sql_updateq('spip_signatures', array('id_petition' => $id_petition), 'id_article=' . $id_article);
+			sql_updateq('spip_signatures', ['id_petition' => $id_petition], 'id_article=' . $id_article);
 		}
 	}
 }
@@ -94,8 +95,8 @@ function upgrade_index_signatures() {
  * @param string $nom_meta_base_version
  */
 function petitions_vider_tables($nom_meta_base_version) {
-	sql_drop_table("spip_petitions");
-	sql_drop_table("spip_signatures");
+	sql_drop_table('spip_petitions');
+	sql_drop_table('spip_signatures');
 
 	effacer_meta($nom_meta_base_version);
 }

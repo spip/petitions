@@ -10,7 +10,7 @@
  *  Pour plus de détails voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
 
-if (!defined("_ECRIRE_INC_VERSION")) {
+if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
@@ -63,7 +63,8 @@ function action_confirmer_signature_dist($var_confirm = null) {
 		// verifier validite de la cle de suppression
 		// l'id_signature est dans var_confirm
 		include_spip('inc/securiser_action');
-		if ($id_signature = intval($var_confirm)
+		if (
+			$id_signature = intval($var_confirm)
 			and (
 				$_GET['refus'] == _action_auteur("supprimer signature $id_signature", '', '', 'alea_ephemere')
 				or
@@ -71,7 +72,7 @@ function action_confirmer_signature_dist($var_confirm = null) {
 			)
 		) {
 			include_spip('action/editer_signature');
-			signature_modifier($id_signature, array("statut" => 'poubelle'));
+			signature_modifier($id_signature, ['statut' => 'poubelle']);
 			$confirm = _T('petitions:info_signature_supprimee');
 		} else {
 			$confirm = _T('petitions:info_signature_supprimee_erreur');
@@ -80,7 +81,7 @@ function action_confirmer_signature_dist($var_confirm = null) {
 		return '';
 	}
 
-	$row = sql_fetsel('*', 'spip_signatures', "statut=" . sql_quote($var_confirm), '', "1");
+	$row = sql_fetsel('*', 'spip_signatures', 'statut=' . sql_quote($var_confirm), '', '1');
 
 	if (!$row) {
 		$confirm = _T('petitions:form_pet_aucune_signature');
@@ -93,24 +94,24 @@ function action_confirmer_signature_dist($var_confirm = null) {
 	$adresse_email = $row['ad_email'];
 	$url_site = $row['url_site'];
 
-	$row = sql_fetsel('email_unique, site_unique, id_article', 'spip_petitions', "id_petition=" . intval($id_petition));
+	$row = sql_fetsel('email_unique, site_unique, id_article', 'spip_petitions', 'id_petition=' . intval($id_petition));
 
-	$email_unique = $row['email_unique'] == "oui";
-	$site_unique = $row['site_unique'] == "oui";
+	$email_unique = $row['email_unique'] == 'oui';
+	$site_unique = $row['site_unique'] == 'oui';
 	$id_article = $row['id_article'];
 
 	include_spip('action/editer_signature');
-	signature_modifier($id_signature, array('statut' => 'publie'));
+	signature_modifier($id_signature, ['statut' => 'publie']);
 
 	if ($email_unique) {
-		$r = "id_petition=" . intval($id_petition) . " AND ad_email=" . sql_quote($adresse_email);
+		$r = 'id_petition=' . intval($id_petition) . ' AND ad_email=' . sql_quote($adresse_email);
 		if (signature_entrop($r)) {
 			$confirm = _T('petitions:form_pet_deja_signe');
 		}
 	}
 
 	if ($site_unique) {
-		$r = "id_petition=" . intval($id_petition) . " AND url_site=" . sql_quote($url_site);
+		$r = 'id_petition=' . intval($id_petition) . ' AND url_site=' . sql_quote($url_site);
 		if (signature_entrop($r)) {
 			$confirm = _T('petitions:form_pet_site_deja_enregistre');
 		}
