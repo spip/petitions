@@ -29,7 +29,7 @@ function action_relancer_signature_dist($id_signature = null) {
 		) {
 			include_spip('action/editer_signature');
 			include_spip('formulaires/signature');
-			$url = generer_url_entite_absolue($id_article, 'article', '', '', true);
+			$url = generer_objet_url_absolue($id_article, 'article', '', '', true);
 			if (
 				signature_a_confirmer(
 					$id_article,

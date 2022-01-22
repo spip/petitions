@@ -211,7 +211,7 @@ parameters:
 			path: action/relancer_signature.php
 
 		-
-			message: "#^Function generer_url_entite_absolue not found\\.$#"
+			message: "#^Function generer_objet_url_absolue not found\\.$#"
 			count: 1
 			path: action/relancer_signature.php
 
