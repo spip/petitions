@@ -23,7 +23,7 @@
 	<langue code="cpf_hat" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=cpf_hat" total="71" traduits="14" relire="0" modifs="7" nouveaux="50" pourcent="19.72" />
 	<langue code="cs" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=cs" total="71" traduits="15" relire="0" modifs="6" nouveaux="50" pourcent="21.13" />
 	<langue code="da" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=da" total="71" traduits="14" relire="0" modifs="7" nouveaux="50" pourcent="19.72" />
-	<langue code="de" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=de" total="71" traduits="66" relire="0" modifs="1" nouveaux="4" pourcent="92.96">
+	<langue code="de" url="https://trad.spip.net/tradlang_module/petitions?lang_cible=de" total="71" traduits="71" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="klaus++" lien="https://trad.spip.net/auteur/klaus" />
 		<traducteur nom="Torsten Willmann" lien="https://trad.spip.net/auteur/torsten-willmann" />
 	</langue>
