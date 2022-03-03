@@ -66,9 +66,9 @@ function action_confirmer_signature_dist($var_confirm = null) {
 		if (
 			$id_signature = intval($var_confirm)
 			and (
-				$_GET['refus'] == _action_auteur("supprimer signature $id_signature", '', '', 'alea_ephemere')
+				$_GET['refus'] == _action_auteur("supprimer signature $id_signature", 0, '', 'alea_ephemere')
 				or
-				$_GET['refus'] == _action_auteur("supprimer signature $id_signature", '', '', 'alea_ephemere_ancien')
+				$_GET['refus'] == _action_auteur("supprimer signature $id_signature", 0, '', 'alea_ephemere_ancien')
 			)
 		) {
 			include_spip('action/editer_signature');
